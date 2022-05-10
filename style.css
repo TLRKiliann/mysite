@@ -1,46 +1,356 @@
-body
-{
-    background: orange;
+body {
+  width: auto;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  background: linear-gradient(0deg, orange,60%,
+    lightgoldenrodyellow);
+
+  animation-name: buddy;
+  animation-duration: 3s;
+  animation-delay: 0s;
+  opacity: 1;
 }
 
-.pics
-{
-    margin: 20% 40%;
+@keyframes buddy {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-img
-{
-    width: 300px;
-    min-height: 200px;
+/*Top black banner with nav*/
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background: black;
+  color: white;
 }
 
-.mafame
-{
-    animation-name: maf;
-    animation-delay: 1s;
-    animation-duration: 4s;
+/*img & animation*/
+.pics {
+  margin: 5px 5px;
+}
+
+img {
+  display: flex;
+  align-items: center;
+  width: 220px;
+  height: 100px;
+}
+
+.anim-pic {
+  animation-name: maf;
+  animation-delay: 0s;
+  animation-duration: 2s;
 }
 
 @keyframes maf {
-    0% {
-        transform: rotateY(0deg);
-        opacity: 0.7;
-    }
-    25% {
-        transform: rotateY(180deg);
-        opacity: 0.3;
-    }
-    50% {
-        transform: rotateY(360deg);
-        opacity: 0;
-    }
-    75% {
-        transform: rotateX(0deg);
-        opacity: 0.3;
-    }
-    100% {
-        transform: rotateX(360deg);
-        opacity: 1;
-    }
+  0% {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+  25% {
+    transform: rotateY(180deg);
+    opacity: 0.7;
+  }
+  50% {
+    transform: rotateY(360deg);
+    opacity: 0.5;
+  }
+  75% {
+    transform: rotateX(0deg);
+    opacity: 0.7;
+  }
+  100% {
+    transform: rotateX(360deg);
+    opacity: 1;
+  }
 }
 
+/*First nav of this page*/
+.first-nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.first-nav > nav > ul {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  margin: 0px 40px;
+  border: 2px yellow;
+  list-style: none;
+  padding: 0;
+}
+
+.first-nav nav ul li {
+  width: 30%;
+  display: inline-flex;
+  align-items: center;
+}
+
+.first-nav nav ul li a {
+  width: 100%;
+  text-align: center;
+  font-family: 'One-serif';
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: white;
+}
+
+.first-nav a:hover {
+  color: gold;
+  transform: scale(1.1);
+
+}
+
+/*This is the left aside*/
+aside {
+  position: absolute;
+  width: 20%;
+  height: 84vh;
+  border-right: 2px solid black;
+
+  animation-name: animside;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+
+#aside-nav h3 {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1.8rem;
+  font-family: "One-serif";
+  color: orange;
+  text-shadow: 1px 1px 0px rosybrown;
+}
+
+#aside-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+#aside-nav li {
+  padding: 2% 10%;
+  display: flex;
+  flex-direction: column;
+  color: #4d4e53;
+  border-top: 1px solid black;
+}
+
+#aside-nav a {
+  font-family: "Times", sans-serif;
+  font-size: 1.2rem;
+  color: purple;
+}
+
+@keyframes animside {
+  0% {
+    transition: 2s;
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transition: 2.5s;
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+/*article of the middle page*/
+article {
+  position: absolute;
+  margin: auto;
+  margin-left: 22%;
+  transform: ease-in 2s;
+} 
+
+article h2 {
+  font-size: 2rem;
+  font-family: "One-serif";
+  color: orange;
+  text-shadow: 1px 1px 0px rosybrown;
+
+  animation-name: artitle;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+}
+
+article p {
+  margin: auto;
+  font-size: 1.4rem;
+  font-family: 'Times New Roman', sans-serif;
+  padding: 10px 20px;
+  text-indent: 40px;
+  text-align: justify;
+  margin: 20px 20px;
+  margin-right: 40px;
+  font-size: 1.2rem;
+  border: 1px solid lightgoldenrodyellow;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px darkgoldenrod;
+  color: purple;
+}
+
+.art-fp {
+  visibility: visible;
+  animation-name: art-fp;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  transition: ease-in 1s;
+}
+
+.art-fptwo {
+  visibility: visible;
+  animation-name: artitletwo;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  transition: ease-in 1s;
+}
+
+.art-fpthree {
+  visibility: visible;
+  animation-name: artitlethree;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  transition: ease-in 1s;
+}
+
+/*Animations of article & p*/
+@keyframes artitle {
+  0% {
+    transform: translateY(500px);
+    opacity: 0;
+  }
+  50% {
+    filter: blur(1.4px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes art-fp {
+  0% {
+    transform: translateY(300px);
+    opacity: 0;
+  }
+  50% {
+    filter: blur(1.4px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes artitletwo {
+  0% {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  50% {
+    filter: blur(1.4px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes artitlethree {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  50% {
+    filter: blur(1.4px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+/*Bottom black banner with nav*/
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background: black;
+}
+
+#last-nav {
+  display: flex;
+  justify-content: center;
+}
+
+#last-nav > ul {
+  /*stack black boder*/
+  margin: 0px 0px;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#last-nav > ul > li {
+  margin: auto;
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  color: white;
+}
+
+#last-nav > ul > li > a {
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-family: "One-serif";
+  color: white;
+}
+
+#last-nav a:hover {
+  color: gold;
+  transform: scale(1.1);
+
+}
+
+.cc {
+  margin-right: 10px;
+  margin-bottom: 3px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+}
+
+.cc img {
+  margin-left: 90%;
+  width: 25px;
+  height: 25px;
+  border: none;
+}
+
+.cc p {
+  margin: auto;
+  color: whitesmoke;
+}
