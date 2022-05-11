@@ -1,6 +1,6 @@
 body {
   width: auto;
-  height: 150vh;
+  height: 200vh;
   margin: 0px;
   padding: 0px;
   background: linear-gradient(0deg, orange,60%,
@@ -23,7 +23,6 @@ body {
 
 /*Top black banner with nav*/
 header {
-  width: 100%;
   display: flex;
   flex-direction: row;
   background: black;
@@ -32,14 +31,18 @@ header {
 
 /*img & animation*/
 .pics {
+  width: 24%;
+  display: flex;
+  align-items: center;
   margin: 5px 5px;
 }
 
 img {
   display: flex;
-  align-items: center;
-  width: 220px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
+  /*width: 220px;
+  height: 100px;*/
 }
 
 .anim-pic {
@@ -77,6 +80,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border: 2px solid whitesmoke;
 }
 
 .first-nav > nav > ul {
@@ -87,12 +91,14 @@ img {
   border: 2px yellow;
   list-style: none;
   padding: 0;
+  border: 2px solid whitesmoke;
 }
 
 .first-nav nav ul li {
   width: 30%;
   display: inline-flex;
   align-items: center;
+  border: 2px solid whitesmoke;
 }
 
 .first-nav nav ul li a {
@@ -102,6 +108,7 @@ img {
   font-size: 1.4rem;
   text-decoration: none;
   color: white;
+  border: 2px solid whitesmoke;
 }
 
 .first-nav a:hover {
@@ -115,20 +122,19 @@ img {
   position: fixed;
   top: 0px;
   height: 100vh;
-  width: 18%;
+  width: 20%;
   border-right: 2px solid black;
 }
 
 aside {
   position: fixed;
+  width: 20%;
   margin-top: 100px;
   
-
   animation-name: animside;
   animation-duration: 2s;
   animation-delay: 0s;
   animation-fill-mode: forwards;
-
 }
 
 #aside-nav h3 {
@@ -192,23 +198,23 @@ h2 {
   animation-iteration-count: 1;
 }
 
-.first-article p {
+.art-p {
   margin: auto;
   margin: 20px 20px;
   margin-right: 40px;
   padding: 10px 20px;
+
   font-size: 1.4rem;
   font-family: 'Times New Roman', sans-serif;
   text-indent: 40px;
   text-align: justify;
+  color: purple;
+
   border: 1px solid lightgoldenrodyellow;
   border-radius: 10px;
   box-shadow: 5px 5px 5px darkgoldenrod;
-  color: purple;
-}
-
-.art-p {
   visibility: visible;
+
   animation-name: art-fp;
   animation-duration: 2s;
   animation-delay: 0s;
@@ -255,36 +261,35 @@ h2 {
 
 
 
-
 .second-art {
   position: absolute;
-  width: auto;
   margin: auto;
-  margin-top: 370px;
+  margin-top: 400px;
   margin-left: 22%;
   transform: ease-in 2s;
 }
 
-#secart-title {
+#div--title {
   color: darkorange;
   text-shadow: 1px 1px 0px rosybrown;
 }
 
 .second-art ul {
-  width: 70vw;
   margin: auto;
   margin: 20px 20px;
   margin-right: 40px;
   padding: 10px 20px;
+
   font-size: 1.4rem;
   font-family: 'Times New Roman', sans-serif;
   text-align: justify;
+  color: purple;
+
   border: 1px solid lightgoldenrodyellow;
   border-radius: 10px;
   box-shadow: 5px 5px 5px darkgoldenrod;
-  color: purple;
-
   visibility: visible;
+
   animation-name: artitletwo;
   animation-duration: 2s;
   animation-delay: 0s;
@@ -293,7 +298,7 @@ h2 {
   transition: ease-in 1s;
 }
 
-.second-art p {
+.secnav--art p {
   animation-name: artitletwo;
   animation-duration: 2s;
   animation-delay: 0s;
@@ -302,14 +307,14 @@ h2 {
   transition: ease-in 1s;
 }
 
-.secnav-aside li {
+.secnav--art li {
   margin-left: 20px;
 
   list-style: none;
   list-style-type: circle;
 }
 
-.secnav-aside ul li a {
+.secnav--art ul li a {
   display: flex;
   flex-direction: column;
 
@@ -368,6 +373,7 @@ footer {
   width: 100%;
   display: flex;
   justify-content: center;
+  border: 2px solid hotpink;
 }
 
 #last-nav > ul > li {
@@ -376,6 +382,7 @@ footer {
   display: inline-flex;
   justify-content: center;
   color: white;
+  border: 2px solid lightblue;
 }
 
 #last-nav > ul > li > a {
@@ -386,31 +393,38 @@ footer {
   font-size: 1.4rem;
   font-family: "One-serif";
   color: white;
+  border: 2px solid yellow;
 }
 
 #last-nav a:hover {
   color: gold;
   transform: scale(1.1);
+}
 
+#main--cc {
+  display: flex;
+  justify-content: right;
+  border: 2px solid white;
 }
 
 .cc {
   margin-right: 10px;
-  margin-bottom: 3px;
   display: flex;
-  flex-direction: row;
   align-items: center;
   color: white;
+  border: 2px solid purple;
 }
 
 .cc img {
-  margin-left: 90%;
   width: 25px;
   height: 25px;
+  margin-right: 3px;
   border: none;
+  border: 2px solid yellow;
 }
 
 .cc p {
   margin: auto;
   color: whitesmoke;
+  border: 2px solid blue;
 }

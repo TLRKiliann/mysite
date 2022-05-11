@@ -164,15 +164,21 @@ aside {
   }
 }
 
-/*article of the middle page*/
-article {
+
+
+
+
+
+/*main with certifications*/
+.main--class {
   position: absolute;
+  width: 75%;
   margin: auto;
   margin-left: 22%;
   transform: ease-in 2s;
-} 
+}
 
-article h2 {
+.main--class h2 {
   font-size: 2rem;
   font-family: "One-serif";
   color: orange;
@@ -184,7 +190,7 @@ article h2 {
   animation-iteration-count: 1;
 }
 
-article p {
+.navbar {
   margin: auto;
   font-size: 1.4rem;
   font-family: 'Times New Roman', sans-serif;
@@ -197,12 +203,9 @@ article p {
   border: 1px solid lightgoldenrodyellow;
   border-radius: 10px;
   box-shadow: 5px 5px 5px darkgoldenrod;
-  color: purple;
-}
-
-.art-fp {
   visibility: visible;
-  animation-name: art-fp;
+
+  animation-name: navanim;
   animation-duration: 2s;
   animation-delay: 0s;
   animation-iteration-count: 1;
@@ -210,27 +213,32 @@ article p {
   transition: ease-in 1s;
 }
 
-.art-fptwo {
-  visibility: visible;
-  animation-name: artitletwo;
-  animation-duration: 2s;
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  transition: ease-in 1s;
+.navbar ul {
+  list-style: none;
+  padding: 0;
 }
 
-.art-fpthree {
-  visibility: visible;
-  animation-name: artitlethree;
-  animation-duration: 2s;
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  transition: ease-in 1s;
+.navbar ul li {
+  display: flex;
 }
 
-/*Animations of article & p*/
+.navbar ul li a {
+  width: 100%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 10%;
+  text-decoration: none;
+  font-family: "Arial", sans-serif;
+  font-size: 1.4rem;
+  border-bottom: 2px solid white;
+  box-shadow: 0 10px 10px -2px darkgoldenrod;
+}
+
+.navbar a:hover {
+  color: white;
+}
+
+/*Animations for h2*/
 @keyframes artitle {
   0% {
     transform: translateY(500px);
@@ -245,7 +253,8 @@ article p {
   }
 }
 
-@keyframes art-fp {
+/*Animations for navbar*/
+@keyframes navanim {
   0% {
     transform: translateY(300px);
     opacity: 0;
@@ -259,79 +268,20 @@ article p {
   }
 }
 
-@keyframes artitletwo {
-  0% {
-    transform: translateY(200px);
-    opacity: 0;
-  }
-  50% {
-    filter: blur(1.4px);
-  }
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
 
-@keyframes artitlethree {
-  0% {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-  50% {
-    filter: blur(1.4px);
-  }
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
+
+
+
+
+
 
 /*Bottom black banner with nav*/
 footer {
   position: fixed;
+  display: flex;
   width: 100%;
   bottom: 0;
   background: black;
-}
-
-#last-nav {
-  display: flex;
-  justify-content: center;
-}
-
-#last-nav > ul {
-  /*stack black boder*/
-  margin: 0px 0px;
-  list-style: none;
-  padding: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-#last-nav > ul > li {
-  margin: auto;
-  width: 100%;
-  display: inline-flex;
-  justify-content: center;
-  color: white;
-}
-
-#last-nav > ul > li > a {
-  width: 100%;
-  margin-top: 20px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 1.4rem;
-  font-family: "One-serif";
-  color: white;
-}
-
-#last-nav a:hover {
-  color: gold;
-  transform: scale(1.1);
-
 }
 
 #main--cc {
@@ -355,6 +305,5 @@ footer {
 }
 
 .cc p {
-  margin: auto;
   color: whitesmoke;
 }

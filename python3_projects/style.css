@@ -1,146 +1,251 @@
 body {
-    width: auto;
-    height: 100vh;
-    margin: 0px;
-    padding: 0px;
-    background: orange;
+  width: auto;
+  height: 200vh;
+  margin: 0px;
+  padding: 0px;
+  background: linear-gradient(0deg, green,60%,
+    lightgreen);
+
+  animation-name: buddy;
+  animation-duration: 3s;
+  animation-delay: 0s;
+  opacity: 1;
 }
 
+@keyframes buddy {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*Top black banner with nav*/
 header {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    background: black;
-    color: white;
+  display: flex;
+  flex-direction: row;
+  background: black;
+  color: white;
 }
 
-/*pic img*/
+/*img & animation*/
 .pics {
-    margin: 10px 10px;
+  width: 24%;
+  display: flex;
+  align-items: center;
+  margin: 5px 5px;
 }
 
 img {
-    width: 140px;
-    min-height: 80px;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  /*width: 220px;
+  height: 100px;*/
 }
 
-/*
 .anim-pic {
-    animation-name: maf;
-    animation-delay: 1s;
-    animation-duration: 4s;
+  animation-name: maf;
+  animation-delay: 0s;
+  animation-duration: 2s;
 }
 
 @keyframes maf {
-    0% {
-        transform: rotateY(0deg);
-        opacity: 0.7;
-    }
-    25% {
-        transform: rotateY(180deg);
-        opacity: 0.3;
-    }
-    50% {
-        transform: rotateY(360deg);
-        opacity: 0;
-    }
-    75% {
-        transform: rotateX(0deg);
-        opacity: 0.3;
-    }
-    100% {
-        transform: rotateX(360deg);
-        opacity: 1;
-    }
-}
-*/
-.first-nav {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /*border: 2px solid white;*/
+  0% {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+  25% {
+    transform: rotateY(180deg);
+    opacity: 0.7;
+  }
+  50% {
+    transform: rotateY(360deg);
+    opacity: 0.5;
+  }
+  75% {
+    transform: rotateX(0deg);
+    opacity: 0.7;
+  }
+  100% {
+    transform: rotateX(360deg);
+    opacity: 1;
+  }
 }
 
+/*First nav of this page*/
+.first-nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 .first-nav > nav > ul {
-    width: 90%;
-    margin: 0px 40px;
-    /*border: 2px yellow;*/
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  margin: 0px 40px;
+  border: 2px yellow;
+  list-style: none;
+  padding: 0;
 }
 
-
 .first-nav nav ul li {
-    width: 30%;
-    display: inline-flex;
-    align-items: center;
-    list-style: none;
-    /*border: 2px solid black;*/
+  width: 30%;
+  display: inline-flex;
+  align-items: center;
 }
 
 .first-nav nav ul li a {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'One-serif';
-    font-size: 1.4rem;
-    text-decoration: none;
-    color: white;
-    /*border: 2px solid lightblue;*/
+  width: 100%;
+  text-align: center;
+  font-family: 'One-serif';
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: white;
 }
 
-.first-nav nav ul li a:hover {
-    color: gold;
+.first-nav a:hover {
+  color: gold;
+  transform: scale(1.1);
+
 }
 
-
-
-
-
-
-
+/*This is the left aside*/
+.class--aside {
+  position: fixed;
+  top: 0px;
+  height: 100vh;
+  width: 20%;
+  border-right: 2px solid black;
+}
 
 aside {
-    position: absolute;
-    width: 240px;
-    height: 80vh;
-    border-right: 2px solid black;
+  position: fixed;
+  width: 20%;
+  margin-top: 100px;
+  
+  animation-name: animside;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
 }
 
-aside h2 {
-    display: flex;
-    justify-content: center;
-    font-size: 2rem;
-    font-family: "One-serif";
-    color: black;
-    text-shadow: 1px 1px 0px purple;
+#aside-nav h3 {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1.8rem;
+  font-family: "One-serif";
+  color: white;
+  text-shadow: 1px 1px 0px rosybrown;
 }
 
-aside a {
-    font-family: "Times", sans-serif;
-    font-size: 1.2rem;
-    color: purple;
+#aside-nav ul {
+  list-style: none;
+  padding: 0;
 }
 
+#aside-nav li {
+  padding: 2% 10%;
+  display: flex;
+  flex-direction: column;
+  color: #4d4e53;
+  border-top: 1px solid black;
+}
 
+#aside-nav a {
+  font-family: "Times", sans-serif;
+  font-size: 1.2rem;
+  color: purple;
+}
 
+@keyframes animside {
+  0% {
+    transition: 2s;
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transition: 2.5s;
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
 
-article {
-  margin: 20px 40px;
-  margin-left: 300px;
+/*article of the middle page*/
+.first-article {
+  position: absolute;
+  margin: auto;
+  margin-left: 22%;
+  transform: ease-in 2s;
 } 
 
-article h2 {
-    font-size: 2rem;
-    font-family: "One-serif";
-    color: black;
-    text-shadow: 1px 1px 0px purple;
+h2 {
+  font-size: 2rem;
+  font-family: "One-serif";
+  color: white;
+  text-shadow: 1px 1px 0px rosybrown;
+
+  animation-name: artitle;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
 }
 
-article p {
-    font-size: 1.2rem;
-    color: purple;
+.art-p {
+  margin: auto;
+  margin: 20px 20px;
+  margin-right: 40px;
+  padding: 10px 20px;
+
+  font-size: 1.4rem;
+  font-family: 'Times New Roman', sans-serif;
+  text-indent: 40px;
+  text-align: justify;
+  color: white;
+
+  border: 1px solid lightgoldenrodyellow;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px darkgoldenrod;
+  visibility: visible;
+
+  animation-name: art-fp;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  transition: ease-in 1s;
+}
+
+/*Animations of article & p*/
+@keyframes artitle {
+  0% {
+    transform: translateY(500px);
+    opacity: 0;
+  }
+  50% {
+    filter: blur(1.4px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes art-fp {
+  0% {
+    transform: translateY(300px);
+    opacity: 0;
+  }
+  50% {
+    filter: blur(1.4px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 
@@ -148,10 +253,167 @@ article p {
 
 
 
+
+
+
+
+.second-art {
+  position: absolute;
+  margin: auto;
+  margin-top: 600px;
+  margin-left: 22%;
+  transform: ease-in 2s;
+}
+
+#div--title {
+  color: darkorange;
+  text-shadow: 1px 1px 0px rosybrown;
+}
+
+.second-art ul {
+  margin: auto;
+  margin: 20px 20px;
+  margin-right: 40px;
+  padding: 10px 20px;
+
+  font-size: 1.4rem;
+  font-family: 'Times New Roman', sans-serif;
+  text-align: justify;
+  color: white;
+
+  border: 1px solid lightgoldenrodyellow;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px darkgoldenrod;
+  visibility: visible;
+
+  animation-name: artitletwo;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  transition: ease-in 1s;
+}
+
+.secnav--art p {
+  animation-name: artitletwo;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  transition: ease-in 1s;
+}
+
+.secnav--art li {
+  margin-left: 20px;
+
+  list-style: none;
+  list-style-type: circle;
+}
+
+.secnav--art ul li a {
+  display: flex;
+  flex-direction: column;
+
+  visibility: visible;
+  animation-name: artitletwo;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  transition: ease-in 1s;
+}
+
+@keyframes artitletwo {
+  0% {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  50% {
+    filter: blur(1.4px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*Bottom black banner with nav*/
 footer {
-    position: absolute;
-    width: 100%;
-    bottom: 0px;
-    background: black;
-    color: white;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background: black;
+}
+
+#last-nav {
+  display: flex;
+  justify-content: center;
+}
+
+#last-nav > ul {
+  /*stack black boder*/
+  margin: 0px 0px;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#last-nav > ul > li {
+  margin: auto;
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  color: white;
+}
+
+#last-nav > ul > li > a {
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-family: "One-serif";
+  color: white;
+}
+
+#last-nav a:hover {
+  color: gold;
+  transform: scale(1.1);
+}
+
+#main--cc {
+  display: flex;
+  justify-content: right;
+}
+
+.cc {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.cc img {
+  width: 25px;
+  height: 25px;
+  margin-right: 3px;
+  border: none;
+}
+
+.cc p {
+  margin: auto;
+  color: whitesmoke;
 }
