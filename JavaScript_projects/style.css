@@ -3,13 +3,14 @@ body {
   height: 200vh;
   margin: 0px;
   padding: 0px;
-  background: linear-gradient(0deg, orange,60%,
-    lightgoldenrodyellow);
+
+  background: rgba(0, 0, 0, 1);
+  opacity: 1;
+  z-index: 0;
 
   animation-name: buddy;
   animation-duration: 3s;
   animation-delay: 0s;
-  opacity: 1;
 }
 
 @keyframes buddy {
@@ -21,12 +22,24 @@ body {
   }
 }
 
+.js-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url("js_wall.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.4;
+  z-index: -1;
+}
+
 /*Top black banner with nav*/
 header {
   display: flex;
   flex-direction: row;
   background: black;
   color: white;
+  z-index: 2;
 }
 
 /*img & animation*/
@@ -80,42 +93,37 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 2px solid whitesmoke;
 }
 
-.first-nav > nav > ul {
-  width: 90%;
+.first-nav nav ul {
   display: flex;
-  justify-content: center;
-  margin: 0px 40px;
-  border: 2px yellow;
+  justify-content: space-between;
   list-style: none;
   padding: 0;
-  border: 2px solid whitesmoke;
 }
 
 .first-nav nav ul li {
-  width: 30%;
+  margin: auto;
   display: inline-flex;
   align-items: center;
-  border: 2px solid whitesmoke;
 }
 
 .first-nav nav ul li a {
-  width: 100%;
-  text-align: center;
   font-family: 'One-serif';
   font-size: 1.4rem;
   text-decoration: none;
   color: white;
-  border: 2px solid whitesmoke;
 }
 
 .first-nav a:hover {
   color: gold;
   transform: scale(1.1);
-
 }
+
+
+
+
+
 
 /*This is the left aside*/
 .class--aside {
@@ -123,13 +131,14 @@ img {
   top: 0px;
   height: 100vh;
   width: 20%;
-  border-right: 2px solid black;
+  border-right: 2px solid yellow;
+  z-index: -1;
 }
 
 aside {
   position: fixed;
   width: 20%;
-  margin-top: 100px;
+  margin-top: 10%;
   
   animation-name: animside;
   animation-duration: 2s;
@@ -137,13 +146,17 @@ aside {
   animation-fill-mode: forwards;
 }
 
-#aside-nav h3 {
-  text-align: center;
-  margin-top: 40px;
-  font-size: 1.8rem;
+#aside-nav h4 {
+  margin-top: 20px;
+  margin-bottom: 0px;
+  margin-left: 20px;
+
   font-family: "One-serif";
-  color: orange;
-  text-shadow: 1px 1px 0px rosybrown;
+  font-weight: bold;
+  font-size: 1.6rem;
+
+  color: yellow;
+  /*text-shadow: 1px 1px 0px black;*/
 }
 
 #aside-nav ul {
@@ -155,14 +168,17 @@ aside {
   padding: 2% 10%;
   display: flex;
   flex-direction: column;
-  color: #4d4e53;
-  border-top: 1px solid black;
+  border-top: 1px solid yellow;
 }
 
 #aside-nav a {
   font-family: "Times", sans-serif;
   font-size: 1.2rem;
-  color: purple;
+  color: white;
+}
+
+#aside-nav i {
+  color: silver;
 }
 
 @keyframes animside {
@@ -178,9 +194,16 @@ aside {
   }
 }
 
+
+
+
+
+
+
+
 /*article of the middle page*/
 .first-article {
-  position: absolute;
+  position: relative;
   margin: auto;
   margin-left: 22%;
   transform: ease-in 2s;
@@ -189,8 +212,8 @@ aside {
 h2 {
   font-size: 2rem;
   font-family: "One-serif";
-  color: orange;
-  text-shadow: 1px 1px 0px rosybrown;
+  color: yellow;
+  /*text-shadow: 1px 1px 0px rosybrown;*/
 
   animation-name: artitle;
   animation-duration: 2s;
@@ -204,18 +227,18 @@ h2 {
   margin-right: 40px;
   padding: 10px 20px;
 
-  font-size: 1.4rem;
   font-family: 'Times New Roman', sans-serif;
+  font-size: 1.2rem;
   text-indent: 40px;
   text-align: justify;
-  color: purple;
+  color: whitesmoke;
 
-  border: 1px solid lightgoldenrodyellow;
+  border: 1px solid yellow;
   border-radius: 10px;
-  box-shadow: 5px 5px 5px darkgoldenrod;
+  box-shadow: 2px 2px 4px black;
   visibility: visible;
 
-  animation-name: art-fp;
+  animation-name: animart;
   animation-duration: 2s;
   animation-delay: 0s;
   animation-iteration-count: 1;
@@ -238,7 +261,7 @@ h2 {
   }
 }
 
-@keyframes art-fp {
+@keyframes animart {
   0% {
     transform: translateY(300px);
     opacity: 0;
@@ -262,32 +285,49 @@ h2 {
 
 
 .second-art {
-  position: absolute;
-  margin: auto;
-  margin-top: 400px;
-  margin-left: 22%;
-  transform: ease-in 2s;
-}
+  position: relative;
 
-#div--title {
-  color: darkorange;
-  text-shadow: 1px 1px 0px rosybrown;
+  margin-top: 20px;
+  margin-left: 22%;
 }
 
 .second-art ul {
-  margin: auto;
   margin: 20px 20px;
   margin-right: 40px;
   padding: 10px 20px;
 
-  font-size: 1.4rem;
   font-family: 'Times New Roman', sans-serif;
+  font-size: 1.2rem;
   text-align: justify;
-  color: purple;
+  color: white;
 
-  border: 1px solid lightgoldenrodyellow;
+  border: 1px solid yellow;
   border-radius: 10px;
-  box-shadow: 5px 5px 5px darkgoldenrod;
+  box-shadow: 2px 2px 4px black;
+  visibility: visible;
+
+  animation-name: artitletwo;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  transition: ease-in 1s;
+}
+
+.secnav--art h3 {
+  color: yellow;
+}
+
+.secnav--art li a {
+  display: flex;
+  align-items: center;
+}
+
+.secnav--art li {
+  margin-left: 40px;
+}
+
+.secnav--art a {
   visibility: visible;
 
   animation-name: artitletwo;
@@ -299,26 +339,6 @@ h2 {
 }
 
 .secnav--art p {
-  animation-name: artitletwo;
-  animation-duration: 2s;
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  transition: ease-in 1s;
-}
-
-.secnav--art li {
-  margin-left: 20px;
-
-  list-style: none;
-  list-style-type: circle;
-}
-
-.secnav--art ul li a {
-  display: flex;
-  flex-direction: column;
-
-  visibility: visible;
   animation-name: artitletwo;
   animation-duration: 2s;
   animation-delay: 0s;
@@ -373,7 +393,6 @@ footer {
   width: 100%;
   display: flex;
   justify-content: center;
-  border: 2px solid hotpink;
 }
 
 #last-nav > ul > li {
@@ -382,7 +401,6 @@ footer {
   display: inline-flex;
   justify-content: center;
   color: white;
-  border: 2px solid lightblue;
 }
 
 #last-nav > ul > li > a {
@@ -390,10 +408,9 @@ footer {
   margin-top: 20px;
   text-align: center;
   text-decoration: none;
-  font-size: 1.4rem;
   font-family: "One-serif";
+  font-size: 1.4rem;
   color: white;
-  border: 2px solid yellow;
 }
 
 #last-nav a:hover {
@@ -404,7 +421,6 @@ footer {
 #main--cc {
   display: flex;
   justify-content: right;
-  border: 2px solid white;
 }
 
 .cc {
@@ -412,7 +428,6 @@ footer {
   display: flex;
   align-items: center;
   color: white;
-  border: 2px solid purple;
 }
 
 .cc img {
@@ -420,11 +435,42 @@ footer {
   height: 25px;
   margin-right: 3px;
   border: none;
-  border: 2px solid yellow;
 }
 
 .cc p {
   margin: auto;
   color: whitesmoke;
-  border: 2px solid blue;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    height: 150%;
+  }
+  .python-bg {
+    position: none;
+    background-position: center;
+  }
+  .pics {
+    width: 26%;
+    align-items: center;
+    margin: 2px 2px;
+  }
+  img {
+    width: 100%;
+    height: 70%;
+  }
+  .class--aside {
+    display: none;
+  }
+  .first-article {
+    position: none;
+    margin: auto;
+    padding-left: 20px;
+  }
+  .second-art {
+    position: none;
+    margin: auto;
+    padding-left: 20px;
+    margin-bottom: 110px;
+  }
 }
