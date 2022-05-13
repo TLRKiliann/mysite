@@ -13,46 +13,45 @@ header {
     color: white;
 }
 
+/*First nav of this page*/
 .first-nav {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /*border: 2px solid white;*/
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.first-nav > nav > ul {
-    width: 90%;
-    margin: 0px 40px;
-    /*border: 2px yellow;*/
+.first-nav nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
 }
 
 .first-nav nav ul li {
-    width: 30%;
-    display: inline-flex;
-    align-items: center;
-    list-style: none;
-    /*border: 2px solid black;*/
+  margin: auto;
+  display: inline-flex;
+  align-items: center;
 }
 
 .first-nav nav ul li a {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'One-serif';
-    font-size: 1.4rem;
-    text-decoration: none;
-    color: white;
-    /*border: 2px solid lightblue;*/
+  font-family: 'One-serif';
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: white;
 }
 
-.first-nav nav ul li a:hover {
-    color: gold;
+.first-nav a:hover {
+  color: gold;
+  transform: scale(1.1);
 }
 
-/*PDF file*/
-embed {
+@media screen and (max-width: 600px) {
+  .first-nav nav ul li a {
+    font-size: 1rem;
+  }
+  iframe {
     width: 100%;
-    height: 100vh;
+    height: 100%;
+  }
 }
