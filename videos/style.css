@@ -1,0 +1,321 @@
+body {
+  width: auto;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  background: floralwhite;
+  animation-name: buddy;
+  animation-duration: 3s;
+  animation-delay: 0s;
+  opacity: 1;
+}
+
+@keyframes buddy {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*Top black banner with nav*/
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background: black;
+  color: white;
+}
+
+/*img & animation*/
+.pics {
+  width: 24%;
+  display: flex;
+  align-items: center;
+  margin: 5px 5px;
+}
+
+img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.anim-pic {
+  animation-name: maf;
+  animation-delay: 0s;
+  animation-duration: 2s;
+}
+
+@keyframes maf {
+  0% {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+  25% {
+    transform: rotateY(180deg);
+    opacity: 0.7;
+  }
+  50% {
+    transform: rotateY(360deg);
+    opacity: 0.5;
+  }
+  75% {
+    transform: rotateX(0deg);
+    opacity: 0.7;
+  }
+  100% {
+    transform: rotateX(360deg);
+    opacity: 1;
+  }
+}
+
+/*First nav of this page*/
+.first-nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.first-nav nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+}
+
+.first-nav nav ul li {
+  margin: auto;
+  display: inline-flex;
+  align-items: center;
+}
+
+.first-nav nav ul li a {
+  font-family: 'One-serif';
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: white;
+}
+
+.first-nav a:hover {
+  color: gold;
+  transform: scale(1.1);
+}
+
+
+
+
+main {
+  margin: 0px 200px;
+
+}
+
+main h3 {
+  font-size: 2rem;
+  color: navy;
+}
+
+.video--one {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.video--one ul {
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.video--one a {
+  margin: 3px 0px;
+  margin-left: 40px;
+
+  display: list-item;
+  list-style-type: decimal;
+  list-style-position: inside;
+
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: blue;
+}
+
+.first--div {
+  border-bottom: 1px solid black;
+}
+
+.video--two {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.video--two ul {
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.video--two a {
+  margin: 3px 0px;
+  margin-left: 40px;
+
+  display: list-item;
+  list-style-type: decimal;
+  list-style-position: inside;
+  
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: blue;
+}
+
+.second--div {
+  border-bottom: 1px solid black;
+}
+
+.video--three {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.video--three ul {
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.video--three a {
+  margin: 3px 0px;
+  margin-left: 40px;
+
+  display: list-item;
+  list-style-type: circle;
+  list-style-position: inside;
+
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: blue;
+}
+
+.third--div {
+  border-bottom: 1px solid black;
+}
+
+
+
+
+/*Bottom black banner with nav*/
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background: black;
+}
+
+#last-nav {
+  display: flex;
+  justify-content: center;
+}
+
+#last-nav > ul {
+  /*stack black boder*/
+  margin: 0px 0px;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#last-nav > ul > li {
+  margin: auto;
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  color: white;
+}
+
+#last-nav > ul > li > a {
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-family: "One-serif";
+  color: white;
+}
+
+#last-nav a:hover {
+  color: gold;
+  transform: scale(1.1);
+
+}
+
+#main--cc {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+}
+
+.cc {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.cc img {
+  width: 25px;
+  height: 25px;
+  margin-right: 3px;
+  border: none;
+}
+
+.cc p {
+  margin: auto;
+  color: whitesmoke;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    height: 300vh;
+  }
+  .pics {
+    width: 26%;
+    align-items: center;
+    margin: 2px 2px;
+  }
+  img {
+    width: 100%;
+    height: 70%;
+  }
+  .first-nav nav ul li a {
+    font-size: 1rem;
+  }
+  main {
+    position: none;
+    margin: auto;
+  }
+  main h3 {
+    font-size: 1rem;
+  }
+  .video--one a {
+    font-size: 0.8rem;
+  }
+  .video--two a {
+    font-size: 0.8rem;
+  }
+  .video--three a {
+    font-size: 0.8rem;
+  }
+  #last-nav > ul > li > a {
+    font-size: 1rem;
+  }
+  .cc img {
+    width: 15px;
+    height: 15px;
+  }
+  .cc p {
+    font-size: 0.6rem;
+  }
+}
