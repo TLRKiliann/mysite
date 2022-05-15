@@ -1,9 +1,9 @@
 body {
   width: auto;
-  height: 100vh;
+  height: 150vh;
   margin: 0px;
   padding: 0px;
-  background: linear-gradient(0deg, orange,60%,
+  background: linear-gradient(0deg, hsla(25, 100%, 50%, 1),60%,
     lightgoldenrodyellow);
 
   animation-name: buddy;
@@ -108,20 +108,24 @@ img {
   transform: scale(1.1);
 }
 
+
+
+
+
 /*This is the left aside*/
 .class--aside {
   position: fixed;
   top: 0px;
   height: 100vh;
-  width: 20%;
-  border-right: 2px solid black;
+  margin-left: 20%;
+  border-right: 2px solid white;
+  box-shadow: 0px 0px 5px grey;
   z-index: -1;
 }
 
 aside {
   position: fixed;
   width: 20%;
-  margin-top: 10%;
   
   animation-name: animside;
   animation-duration: 2s;
@@ -134,13 +138,25 @@ aside {
   margin-bottom: 0px;
   margin-left: 20px;
 
-  font-family: "One-serif";
+  font-family: "One-serif", sans-serif;
   font-weight: bold;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 
   color: orange;
-  text-shadow: 1px 1px 0px rosybrown;
-  /*text-shadow: 1px 1px 0px black;*/
+  text-shadow:
+  2px 1px 0px darkorange,
+  3px 2px 1px brown; 
+}
+
+#aside-nav h3 {
+  margin: auto;
+  margin-left: 0px;
+  font-family: Snell Roundhand, cursive;
+  font-size: 1.4rem;
+  color: orange;
+  text-shadow:
+  2px 1px 0px darkorange,
+  3px 2px 1px brown;
 }
 
 #aside-nav ul {
@@ -152,17 +168,24 @@ aside {
   padding: 2% 10%;
   display: flex;
   flex-direction: column;
-  border-top: 1px solid black;
+  border-top: 1px solid white;
 }
 
 #aside-nav a {
-  font-family: "Times", sans-serif;
-  font-size: 1.2rem;
+  position: relative;
+  margin-left: 10px;
+  text-decoration: none;
+  font-style: italic;
+  font-size: 1rem;
   color: black;
 }
 
+#aside-nav a:hover {
+  color: blue;
+}
+
 #aside-nav i {
-  color: dimgrey;
+  color: silver;
 }
 
 @keyframes animside {
@@ -177,6 +200,11 @@ aside {
     opacity: 1;
   }
 }
+
+
+
+
+
 
 /*article of the middle page*/
 article {
@@ -201,17 +229,20 @@ article h2 {
 article p {
   margin: auto;
   font-size: 1.4rem;
-  font-family: 'Times New Roman', sans-serif;
+  font-family: 'Consolas', sans-serif;
   padding: 10px 20px;
-  text-indent: 40px;
+  text-indent: 20px;
   text-align: justify;
   margin: 20px 20px;
   margin-right: 40px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   border: 1px solid lightgoldenrodyellow;
   border-radius: 10px;
   box-shadow: 5px 5px 5px darkgoldenrod;
-  color: purple;
+  background: linear-gradient(340deg, #ffab67,90%,
+    lightgoldenrodyellow);
+  color: #660080;
+  /*color: #660080;*/
 }
 
 .art-fp {

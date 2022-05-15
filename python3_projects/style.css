@@ -136,7 +136,7 @@ img {
   position: fixed;
   top: 0px;
   height: 100vh;
-  width: 20%;
+  margin-left: 20%;
   border-right: 2px solid lightgreen;
   z-index: -1;
 }
@@ -144,7 +144,6 @@ img {
 aside {
   position: fixed;
   width: 20%;
-  margin-top: 10%;
   
   animation-name: animside;
   animation-duration: 2s;
@@ -165,6 +164,10 @@ aside {
   /*text-shadow: 1px 1px 0px black;*/
 }
 
+#aside-nav h3 {
+  color: lightgreen;
+}
+
 #aside-nav ul {
   list-style: none;
   padding: 0;
@@ -178,9 +181,16 @@ aside {
 }
 
 #aside-nav a {
+  position: relative;
+  margin-left: 20px;
+  text-decoration: none;
   font-family: "Times", sans-serif;
   font-size: 1.2rem;
   color: white;
+}
+
+#aside-nav a:hover {
+  color: orange;
 }
 
 #aside-nav i {
@@ -199,6 +209,7 @@ aside {
     opacity: 1;
   }
 }
+
 
 
 
@@ -242,6 +253,8 @@ h2 {
   border: 1px solid lightgreen;
   border-radius: 10px 10px 0px 0px;
   box-shadow: 2px 2px 5px black;
+  background: rgba(0, 0, 0, 0.3);
+
   visibility: visible;
 
   animation-name: animptag;
@@ -266,6 +279,7 @@ h2 {
 
   border: 1px solid lightgreen;
   box-shadow: 2px 2px 5px black;
+  background: rgba(0, 0, 0, 0.3);
   visibility: visible;
 
   animation-name: animptag;
@@ -290,6 +304,7 @@ h2 {
   border: 1px solid lightgreen;
   border-radius: 0px 0px 10px 10px;
   box-shadow: 2px 2px 5px black;
+  background: rgba(0, 0, 0, 0.3);
   visibility: visible;
 
   animation-name: animptag;
@@ -366,6 +381,10 @@ h2 {
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   transition: ease-in 1s;
+}
+
+.secnav--art {
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .secnav--art h3 {

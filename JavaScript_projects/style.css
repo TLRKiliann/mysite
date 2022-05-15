@@ -39,7 +39,6 @@ header {
   flex-direction: row;
   background: black;
   color: white;
-  z-index: 2;
 }
 
 /*img & animation*/
@@ -130,7 +129,7 @@ img {
   position: fixed;
   top: 0px;
   height: 100vh;
-  width: 20%;
+  margin-left: 20%;
   border-right: 2px solid yellow;
   z-index: -1;
 }
@@ -138,8 +137,9 @@ img {
 aside {
   position: fixed;
   width: 20%;
-  margin-top: 10%;
-  
+
+  background: rgba(0, 0, 0, 0.3);
+
   animation-name: animside;
   animation-duration: 2s;
   animation-delay: 0s;
@@ -159,6 +159,10 @@ aside {
   /*text-shadow: 1px 1px 0px black;*/
 }
 
+#aside-nav h3 {
+  color: yellow;
+}
+
 #aside-nav ul {
   list-style: none;
   padding: 0;
@@ -172,9 +176,16 @@ aside {
 }
 
 #aside-nav a {
+  position: relative;
+  margin-left: 20px;
+  text-decoration: none;
   font-family: "Times", sans-serif;
   font-size: 1.2rem;
   color: white;
+}
+
+#aside-nav a:hover {
+  color: orange;
 }
 
 #aside-nav i {
@@ -236,6 +247,7 @@ h2 {
   border: 1px solid yellow;
   border-radius: 10px;
   box-shadow: 2px 2px 4px black;
+  background: rgba(0, 0, 0, 0.3);
   visibility: visible;
 
   animation-name: animart;
@@ -292,6 +304,7 @@ h2 {
 }
 
 .second-art ul {
+  margin: auto;
   margin: 20px 20px;
   margin-right: 40px;
   padding: 10px 20px;
@@ -304,6 +317,7 @@ h2 {
   border: 1px solid yellow;
   border-radius: 10px;
   box-shadow: 2px 2px 4px black;
+  background: rgba(0, 0, 0, 0.3);
   visibility: visible;
 
   animation-name: artitletwo;
@@ -324,6 +338,7 @@ h2 {
 }
 
 .secnav--art li {
+  margin-top: 20px;
   margin-left: 40px;
 }
 
@@ -360,13 +375,6 @@ h2 {
     opacity: 1;
   }
 }
-
-
-
-
-
-
-
 
 
 
