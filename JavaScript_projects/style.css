@@ -473,6 +473,9 @@ footer {
   .class--aside {
     display: none;
   }
+  aside {
+    display: none;
+  }
   .first-article {
     position: none;
     margin: auto;

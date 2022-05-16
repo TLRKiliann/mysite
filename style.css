@@ -423,6 +423,9 @@ footer {
   .class--aside {
     display: none;
   }
+  aside {
+    display: none;
+  }
   article{
     position: none;
     margin: auto;
