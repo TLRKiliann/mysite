@@ -1,6 +1,6 @@
 body {
   width: auto;
-  height: 150vh;
+  height: 170vh;
   margin: 0px;
   padding: 0px;
   background: linear-gradient(0deg, hsla(25, 100%, 50%, 1),60%,
@@ -152,7 +152,7 @@ aside {
   margin: auto;
   margin-left: 0px;
   font-family: Snell Roundhand, cursive;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: orange;
   text-shadow:
   2px 1px 0px darkorange,
@@ -239,13 +239,14 @@ article p {
   border: 1px solid lightgoldenrodyellow;
   border-radius: 10px;
   box-shadow: 5px 5px 5px darkgoldenrod;
-  background: linear-gradient(340deg, #ffab67,90%,
-    lightgoldenrodyellow);
   color: #660080;
-  /*color: #660080;*/
 }
 
+
+
 .art-fp {
+  background: linear-gradient(340deg, #ffab67, 80%,
+    lightgoldenrodyellow);
   visibility: visible;
   animation-name: art-fp;
   animation-duration: 2s;
@@ -256,6 +257,8 @@ article p {
 }
 
 .art-fptwo {
+  background: linear-gradient(340deg, #ffab67, 92%,
+    lightgoldenrodyellow);
   visibility: visible;
   animation-name: artitletwo;
   animation-duration: 2s;
@@ -266,6 +269,8 @@ article p {
 }
 
 .art-fpthree {
+  background: linear-gradient(340deg, #ffab67, 98%,
+    lightgoldenrodyellow);
   visibility: visible;
   animation-name: artitlethree;
   animation-duration: 2s;
@@ -331,6 +336,65 @@ article p {
     opacity: 1;
   }
 }
+
+
+
+
+
+
+hr {
+  margin-top: 50px;
+  margin-right: 210px;
+  margin-bottom: 50px;
+  margin-left: 170px;
+  color: white;
+}
+
+#video--title {
+  margin: auto;
+  margin-top: 10px;
+}
+
+#video--title h2 {
+  color: palegoldenrod;
+  text-shadow: 1px 1px 0px grey;
+}
+
+#allvideos {
+  transform: ease-in 2s;
+
+  margin-left: 10px;
+  height: 500px;
+  display: grid;
+  grid-template-columns: 1Fr 1Fr 1Fr;
+  grid-template-rows: 1Fr 1Fr 1Fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+
+.videos {
+  margin: auto;
+}
+
+#video-1 {
+  margin-left: 0px;
+}
+
+#video-4 {
+  margin-left: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /*Bottom black banner with nav*/
 footer {
