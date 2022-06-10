@@ -1,6 +1,6 @@
 body {
-  width: auto;
-  height: 170vh;
+  width: 100%;
+  height: 1300px;
   margin: 0px;
   padding: 0px;
   background: linear-gradient(0deg, hsla(25, 100%, 50%, 1),60%,
@@ -23,19 +23,24 @@ body {
 
 /*Top black banner with nav*/
 header {
+  position: fixed;
   width: 100%;
+  top: 0px;
+  height: 100px;
+
   display: flex;
   flex-direction: row;
   background: black;
   color: white;
+  z-index: 2;
 }
 
 /*img & animation*/
 .pics {
-  width: 24%;
+  margin: 5px 35px;
+  width: 18%;
   display: flex;
   align-items: center;
-  margin: 5px 5px;
 }
 
 img {
@@ -125,8 +130,10 @@ img {
 
 aside {
   position: fixed;
+  margin-top: 7%;
   width: 20%;
-  
+  z-index: 1;
+
   animation-name: animside;
   animation-duration: 2s;
   animation-delay: 0s;
@@ -172,7 +179,6 @@ aside {
 }
 
 #aside-nav a {
-  position: relative;
   margin-left: 10px;
   text-decoration: none;
   /*font-style: italic;*/
@@ -208,8 +214,11 @@ aside {
 
 /*article of the middle page*/
 article {
-  position: absolute;
+  position: relative;
   margin: auto;
+
+  top: 8%;
+
   margin-left: 22%;
   transform: ease-in 2s;
 } 
@@ -359,19 +368,25 @@ hr {
 }
 
 #allvideos {
-  transform: ease-in 2s;
-
-  margin-left: 10px;
   height: 500px;
+
   display: grid;
   grid-template-columns: 1Fr 1Fr 1Fr;
   grid-template-rows: 1Fr 1Fr 1Fr;
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
+  grid-column-gap: 0.5Fr;
+  grid-row-gap: 0.5Fr;
 }
 
 .videos {
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.videos legend {
+  margin: 10px 0px;
+  color: purple;
 }
 
 #video-1 {
@@ -517,16 +532,14 @@ hr {
   }
 }
 
-div#autumn-container {
-  position: relative;
+#autumn-container {
+  position: absolute;
+  width: 98%;
+  top: 100px;
+  height: 77vh;
 
-  margin: auto;
-  height: 80vh;
-  margin: auto;
   overflow: hidden;
-  
   perspective: 1800px;
-  /*z-index: 2;*/
   opacity: 0;
 
   /*border: 2px solid white;*/
