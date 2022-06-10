@@ -175,8 +175,8 @@ aside {
   position: relative;
   margin-left: 10px;
   text-decoration: none;
-  font-style: italic;
-  font-size: 1rem;
+  /*font-style: italic;*/
+  font-size: 0.9rem;
   color: black;
 }
 
@@ -511,4 +511,102 @@ footer {
   .cc p {
     font-size: 0.6rem;
   }
+}
+
+
+/*Leaves animation*/
+@keyframes sway { 
+  0% { 
+    transform: rotateZ(-15deg) rotateX(55deg);
+  }
+  30% {
+    transform: rotateZ(20deg) rotateX(60deg);
+    animation-timing-function: ease-in-out;
+  }
+  60% { 
+    transform: rotateZ(-20deg) rotateX(55deg);
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    transform: rotateZ(0deg) rotateX(60deg);
+    animation-timing-function: cubic-bezier(0.990, 0.000, 0.890, 0.535);
+    }
+}
+
+@keyframes fall { 
+  60% {
+    filter: drop-shadow(0px 60px 40px rgba(0,0,0,0));
+  }
+  100% {
+    margin-top: 650px;
+    filter: drop-shadow(0px 5px 8px rgba(0,0,0,0.6));
+  }
+}
+
+@keyframes timeleaf { 
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+div#autumn-container {
+  position: relative;
+
+  margin: auto;
+  height: 100vh;
+  margin: auto;
+  border: 1px solid #000;
+  overflow: hidden;
+  perspective: 1800px;
+  opacity: 0;
+
+  border: 2px solid white;
+
+  animation-name: timeleaf;
+  animation-duration: 12s;
+  animation-delay: 0s;
+}
+
+img[alt="autumn leaf"] {
+  position: absolute;
+
+  /*width: 10%;
+  height: 30%;*/
+
+  transform-origin: 0px -150px 0px;
+  animation-name: fall, sway;
+  animation-duration: 7s, 8s;
+  animation-fill-mode: both;
+  animation-timing-function: linear, ease-in-out;
 }
