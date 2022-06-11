@@ -24,6 +24,9 @@ body {
 
 #githubimg {
   position: fixed;
+  
+  margin-top: -100px;
+
   width: 99%;
   height: 100%;
 
@@ -32,7 +35,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
-  background-size: 170%;
+  background-size: 150%;
 
   opacity: 0.4;
   z-index: -1;
@@ -90,12 +93,12 @@ img {
 }
 
 .anim-pic {
-  animation-name: maf;
+  animation-name: minipics;
   animation-delay: 0s;
   animation-duration: 2s;
 }
 
-@keyframes maf {
+@keyframes minipics {
   0% {
     transform: rotateY(0deg);
     opacity: 1;
@@ -150,7 +153,6 @@ img {
   color: gold;
   transform: scale(1.1);
 }
-
 
 /*
 .splitter {

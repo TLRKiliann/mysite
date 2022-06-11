@@ -1,6 +1,6 @@
 body {
   width: auto;
-  height: 100vh;
+  height: 110vh;
   margin: 0px;
   padding: 0px;
   background: linear-gradient(0deg, orange,60%,
@@ -174,7 +174,7 @@ aside {
   margin-left: 20px;
   text-decoration: none;
   font-family: "Times", sans-serif;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   color: black;
 }
 
@@ -209,7 +209,7 @@ aside {
   position: absolute;
   width: 75%;
   margin: auto;
-  margin-top: 5%;
+  margin-top: 20px;
   margin-left: 22%;
   transform: ease-in 2s;
 }
@@ -227,15 +227,15 @@ aside {
 }
 
 .navbar {
-  margin: auto;
-  font-size: 1.4rem;
-  font-family: 'Times New Roman', sans-serif;
   padding: 10px 20px;
-  text-indent: 40px;
-  text-align: justify;
   margin: 20px 20px;
   margin-right: 40px;
+  
+  font-family: 'Times New Roman', sans-serif;
   font-size: 1.2rem;
+  text-indent: 10px;
+  text-align: justify;
+
   border: 1px solid lightgoldenrodyellow;
   border-radius: 10px;
   box-shadow: 5px 5px 5px darkgoldenrod;
@@ -250,24 +250,33 @@ aside {
 }
 
 .navbar ul {
-  list-style: none;
-  padding: 0;
+  padding-left: 10%;
+  /*list-style: none;
+  padding: 0;*/
 }
 
-.navbar ul li {
+.navbar li {
+  padding-top: 2%;
+  padding-bottom: 2%;
+
+  list-style-type: disc;
+  color: blue;
+}
+
+.navbar li a {
   display: flex;
 }
 
-.navbar ul li a {
-  width: 100%;
+.navbar a {
   padding-top: 2%;
   padding-bottom: 2%;
-  padding-left: 10%;
+
   text-decoration: none;
   font-family: "Arial", sans-serif;
   font-size: 1.4rem;
+  
   border-bottom: 2px solid white;
-  box-shadow: 0 10px 10px -2px darkgoldenrod;
+  box-shadow: 10px 10px 10px 3px darkgoldenrod;
 }
 
 .navbar a:hover {
