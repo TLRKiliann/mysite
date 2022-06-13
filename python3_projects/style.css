@@ -526,6 +526,7 @@ footer {
   body {
     height: 150%;
   }
+
   .python-bg {
     position: none;
     background-position: center;
@@ -537,7 +538,7 @@ footer {
   }
   img {
     width: 100%;
-    height: 70%;
+    height: 50%;
   }
   .first-nav nav ul li a {
     font-size: 1rem;
@@ -545,20 +546,36 @@ footer {
   .class--aside {
     display: none;
   }
+
   aside {
     display: none;
   }
   .first-article {
     position: none;
     margin: auto;
+    top: 100px;
     padding-left: 20px;
   }
+  .firstnav-art p {
+    font-size: 0.8rem;
+  }
+
   .second-art {
     position: none;
     margin: auto;
     padding-left: 20px;
+    margin-top: 140px;
     margin-bottom: 110px;
   }
+
+  .secnav--art p {
+    font-size: 0.8rem;
+  }
+
+  .secnav--art a {
+    font-size: 0.8rem;
+  }
+
   #last-nav > ul > li > a {
     font-size: 1rem;
   }

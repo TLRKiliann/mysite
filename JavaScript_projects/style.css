@@ -467,9 +467,10 @@ footer {
 
 @media screen and (max-width: 600px) {
   body {
-    height: 150%;
+    height: 210vh;
   }
-  .python-bg {
+
+  .js-bg {
     position: none;
     background-position: center;
   }
@@ -488,20 +489,35 @@ footer {
   .class--aside {
     display: none;
   }
+
   aside {
     display: none;
   }
+
   .first-article {
     position: none;
     margin: auto;
+    top: 100px;
     padding-left: 20px;
   }
+  .first-article p {
+    font-size: 0.8rem;
+  }
+
   .second-art {
     position: none;
     margin: auto;
+    top: 110px;
     padding-left: 20px;
-    margin-bottom: 110px;
   }
+  .second-art p {
+    font-size: 0.8rem;
+  }
+
+  .secnav--art, a, i {
+    font-size: 0.8rem;
+  }
+
   #last-nav > ul > li > a {
     font-size: 1rem;
   }
