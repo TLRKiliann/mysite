@@ -683,9 +683,9 @@ footer {
 
 
 /*Media screen*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   body {
-    height: 400vh;
+    height: 3000px;
   }
   .pics {
     width: 26%;
@@ -718,13 +718,15 @@ footer {
   #gitref:hover {
     color: red;
   }
+
   .class--aside {
     display: none;
   }
   aside {
     display: none;
   }
-  article{
+
+  article {
     position: none;
     margin: auto;
     top: 100px;
@@ -736,9 +738,15 @@ footer {
     padding-left: 20px;
     margin-bottom: 110px;
   }
+
   hr {
     display: none;
   }
+
+  #allvideos {
+    width: 80%;
+  }
+
   #last-nav > ul > li > a {
     font-size: 1rem;
   }
